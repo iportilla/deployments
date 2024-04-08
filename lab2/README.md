@@ -52,7 +52,7 @@ All required model assets will be downloaded during the build process. _Note_ 
 To run the docker image, which automatically starts the model serving API, run:
 
 ```bash
-$ docker run -it -p 5000:5000 max-object-detector
+docker run -it -p 5000:5000 max-object-detector
 ```
 
 ### 3. Use the Model
