@@ -1,5 +1,7 @@
 ## Deploy on Code Engine
 
+[Original instructions](https://hub.docker.com/r/codait/max-object-detector#deploy-on-code-engine)
+
 You can also deploy the model on IBM Cloud's Code Engine platform which is based on the Knative serverless framework. Once authenticated with your IBM Cloud account, run the commands below.
 
 Create a Code Engine project, give it a unique name
