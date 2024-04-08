@@ -23,3 +23,10 @@ or try with
 ```bash
 curl -F "image=@./dog-human.jpg" -XPOST https://max-object-detector.*****/model/predict | jq
 ```
+
+
+or 
+
+```bash
+https://max-object-detector.***/app/
+```
