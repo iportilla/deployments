@@ -57,7 +57,7 @@ You will see:
   ]
 }
 ```
-
+![Alt text](./dog.png) "results")
 or 
 
 ```bash
