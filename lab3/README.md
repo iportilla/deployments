@@ -17,3 +17,9 @@ ibmcloud ce application create --name max-object-detector --image quay.io/codait
 ```
 
 Open the resulting URL in a browser, append /app to view the app instead of the API.
+
+or try with
+
+```bash
+curl -F "image=@./dog-human.jpg" -XPOST https://max-object-detector.*****/model/predict | jq
+```
