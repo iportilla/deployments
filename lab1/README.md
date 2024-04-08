@@ -75,3 +75,6 @@ curl -F "image=@./dog-human.jpg" -XPOST http://localhost:5000/detect_objects
   ]
 }
 ```
+
+
+*Watch for conda environment name and/or FLASK port conflicts with other students lab work*
