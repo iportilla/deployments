@@ -57,8 +57,12 @@ You will see:
   ]
 }
 ```
-![Alt text](./dog.png) "results")
+
+
+![Alt text](./dog.png)
+
 or 
+Click on:
 
 ```bash
 https://max-object-detector.***/app/
