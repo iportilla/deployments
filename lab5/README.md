@@ -25,11 +25,15 @@ Change directory into the repository base folder:
 cd MAX-Object-Detector
 ```
 
-For ARM CPUs (eg Raspberry Pi, Jetson Nano), run:
+For ARM CPUs (eg Raspberry Pi), run:
 
 ```bash
 docker build -f Dockerfile.arm32v7 -t max-object-detector .
 ```
+FOR Jetson Nano
+
+docker pull tkislan/image-object-detection:jetson-ssd-mobilenet-v2-coco-latest
+
 
 To select a model, pass in the `--build-arg model=<desired-model>` switch:
 
