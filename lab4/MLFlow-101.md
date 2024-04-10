@@ -20,3 +20,60 @@ For deploying models at scale, MLflow integrates with several cloud platforms li
 For situations where some level of coding is unavoidable, MLflow Projects can package data science code in a format that can be easily reproduced and shared with others. This includes specifying the environment and parameters required to run the code, making it easier for others to deploy models without deep diving into the code.
 
 In summary, MLflow's no-code model deployment capability largely revolves around abstracting away the complexities of deployment environments, simplifying the process of getting models into production. While some setup and interaction with MLflow's components might initially require minimal coding or command-line operations, the overall goal is to make deployment as straightforward as possible for users at all levels of expertise.
+
+
+See [link](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-deploy-mlflow-models?view=azureml-api-2) for MLflow with Azure ML
+
+
+
+## MLflow example file
+
+The provided text is an example of the metadata for a machine learning model tracked and managed by MLflow. It's structured in a way that describes how the model was packaged, its dependencies, and how it can be loaded and used. Let's break down each section for clarity:
+
+artifact_path: credit_defaults_model
+artifact_path: This is the location within the MLflow artifact storage where the model is saved. In this case, credit_defaults_model likely refers to a directory containing the model and possibly other related files.
+flavors
+MLflow models can be saved in multiple "flavors" that describe different ways the model can be used or deployed. This model includes two flavors: python_function and sklearn.
+
+### python_function
+env: Specifies the environment needed to run the model. It includes references to conda.yaml and python_env.yaml, which likely contain the Conda and Python virtual environment specifications, respectively.
+
+loader_module: Indicates the module used to load the model, mlflow.sklearn in this case, which suggests the model is a Scikit-Learn model.
+
+model_path: The path to the serialized model file, model.pkl.
+
+predict_fn: The function to call for making predictions. It's predict here, which is a common convention in Scikit-Learn models.
+
+python_version: Specifies the Python version the model was created with, 3.8.19.
+
+### sklearn
+code: Indicates if any custom code is associated with the model. null suggests there isn't any in this case.
+
+pickled_model: The path to the pickled model file, again model.pkl.
+
+serialization_format: The format used to serialize the model, cloudpickle, which is a more flexible pickling library for Python objects.
+
+sklearn_version: The version of Scikit-Learn used to train the model, 1.0.2.
+
+mlflow_version: 2.8.0
+Specifies the version of MLflow used for tracking the model, 2.8.0.
+
+model_size_bytes: 120194
+The size of the model in bytes, 120194, which provides a sense of the model's scale.
+
+model_uuid: 6d5bd2b7b6e54405be349a81bda4b01a
+A unique identifier for the model.
+
+run_id: dreamy_key_t3b7fvy1ct
+The ID of the MLflow run that produced this model. This can be used to trace back to the experiment run details.
+utc_time_created: '2024-04-10 02:20:44.242248'
+
+The timestamp when the model was created, useful for versioning and historical records.
+This metadata is crucial for understanding the model's dependencies, how it was packaged, and how it can be deployed or used in various environments. It ensures reproducibility and ease of deployment across different platforms or projects.
+
+
+
+
+
+
+
