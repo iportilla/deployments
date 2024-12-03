@@ -22,32 +22,40 @@ conda activate detector
 ```bash
 git clone https://github.com/iportilla/deployments.git
 ```
-7. cd to lab 1 directory:
+6. cd to lab 1 directory:
    ```bash
 	cd deployments\lab1
+   ```
+7. Install Google drive download tool:
+   ```bash
+   	pip install gdown
+   ```
+8. Download the TF frozen model:
+   ```bash
+   	gdown FILE_ID
    ```
 9. Get TF frozen model:
    ```bash
 	cp {[PATH]}/frozen_inference_graph.pb .
    ```
- 11. Install dependencies:
+ 10. Install dependencies:
 ```bash
 pip install flask
 pip install opencv-python
 ```
-13. Install requirements.txt
+11. Install requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
-15. Run flask app:
+12. Run flask app:
 ```bash
 python app.py
 ```
-17. In another shell window, Test object detector with:
+13. In another shell window, Test object detector with:
 ```bash
 curl -F "image=@./dog-human.jpg" -XPOST http://localhost:5000/detect_objects
 ```
-19. Verified inference message:
+14. Verified inference message:
     
 ```bash
 {
