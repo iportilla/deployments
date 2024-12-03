@@ -4,6 +4,13 @@
 
 You can also deploy the model on IBM Cloud's Code Engine platform which is based on the Knative serverless framework. Once authenticated with your IBM Cloud account, run the commands below.
 
+Install IBMCLOUD client:
+
+https://cloud.ibm.com/docs/cli?topic=cli-getting-started
+
+IBM Code Engine:
+https://cloud.ibm.com/containers/overview
+
 Create a Code Engine project, give it a unique name
 
 ```bash
