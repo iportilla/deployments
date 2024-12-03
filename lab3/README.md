@@ -11,6 +11,17 @@ https://cloud.ibm.com/docs/cli?topic=cli-getting-started
 IBM Code Engine:
 https://cloud.ibm.com/containers/overview
 
+Login to your IBM cloud account
+
+```
+ibmcloud login
+```
+
+Install Cloud Engine pluging:
+```
+ibmcloud plugin install code-engine
+```
+
 Create a Code Engine project, give it a unique name
 
 ```bash
