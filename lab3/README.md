@@ -22,6 +22,12 @@ Install Cloud Engine pluging:
 ibmcloud plugin install code-engine
 ```
 
+Set default resource:
+
+```
+ibmcloud target -g Default
+```
+
 Create a Code Engine project, give it a unique name
 
 ```bash
